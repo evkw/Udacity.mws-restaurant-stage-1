@@ -105,9 +105,11 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  display: flex;
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
+  flex-grow: 1;
+  flex-direction: column;
   align-items: center;
 }
 .filter-options h2 {
@@ -126,11 +128,24 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 90%;
 }
+
+@media (min-width:481px)  { 
+  .filter-options {
+    flex-direction: row;
+  }
+  .filter-options select {
+    width: 200px;
+  }
+ }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -141,20 +156,22 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
   width: 270px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
-  max-width: 100%;
-  min-height: 248px;
-  min-width: 100%;
+  width: 100%;
 }
+
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -183,6 +200,13 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+
+.inside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .inside header {
   position: fixed;
   top: 0;
@@ -190,23 +214,21 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 87%;
+  display: flex;
   position: fixed;
+  flex-grow: 1;
+  background: blue none repeat scroll 0 0;
   right: 0;
   top: 80px;
   width: 50%;
+  height: 82%;
 }
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
 }
-.inside #footer {
-  bottom: 0;
-  position: absolute;
-  width: 50%;
-}
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -218,7 +240,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  width: 90%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -273,3 +295,5 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+
