@@ -101,13 +101,19 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+#map {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+
 #maincontent #map-container {
   height: 400px;
   width: 100%;
   background-color: #ccc;
 }
 
-#maincontent-top #map-container {
+#maincontent-top > #map-container, #maincontent-top > #map-container > #map {
   height: 200px;
 }
 
@@ -117,7 +123,7 @@ nav h1 a {
 }
 
 @media (min-width:700px)  { 
-  .inside #map-container {
+  #maincontent-top > #map-container, #maincontent-top > #map-container > #map {
     height: 660px;
   }
  }
