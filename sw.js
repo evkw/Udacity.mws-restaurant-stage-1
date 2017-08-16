@@ -3,8 +3,11 @@ self.addEventListener('install', function(event) {
 });var CACHE_NAME = 'restaurant-cache';
 var urlsToCache = [
   '/',
-  '/css/styles.css',
-  '/js/main.js'
+  '/index.html',
+  '/restaurant.html',
+  '/css/*.css',
+  '/js/*.js',
+  '/img/*.jpg'
 ];
 
 self.addEventListener('install', function(event) {
