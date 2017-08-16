@@ -13,5 +13,6 @@ You have been provided the code for a restaurant reviews website. The code has a
 ### Evan's Notes
 - I had issues getting the Python server to work with service workers so i ended up using NPM http-server package https://www.npmjs.com/package/http-server
 - It wasnt clear if flexbox was not to be used, i googled it a bit and apparently its not considered a CSS framework, so i went for a gamble with it.
+- Port to use is still 8000
 
 
